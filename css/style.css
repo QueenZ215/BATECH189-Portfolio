@@ -1,0 +1,152 @@
+/* Base styling */
+body {
+  font-family: 'Alice', serif;
+  background-color: #000;
+  margin: 0;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url(../images/backgound.jpg);
+}  
+/*
+.outer-container2 {
+  background: #000;
+  max-width: 60em;
+  width: 100%;
+  padding: 1em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  border:3em solid #2f0e38;
+  
+} */
+.outer-container {
+  /* background: #000; */
+  background:transparent;
+  color: #fff;
+  margin:0 auto;
+  max-width: 50em;
+  width: 100%;
+  padding: 2em;
+  border-radius: 12px;
+  /* border:2px solid #511b63; */
+  
+  
+}
+
+.inner-container {
+  background: #511b63;
+  width: 100%;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-height: 100vh;
+  border:2px solid #872ba6;
+  max-width: 40em;
+  margin: 0 auto;
+  text-align: center;
+}
+.inner-container-project {
+  background: #000;
+  /* background:transparent; */
+  /* width: 100%; */
+  padding: 2em;
+  padding-top: 1em;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  min-height: 100vh;
+  border:2px solid #872ba6;
+  max-width: 50em;
+  align-content: center;
+  
+}
+/* Header + Nav */
+header {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Inner container for profile */
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%; /* circular */
+  border: 4px solid #c037e6;
+  margin-bottom: 1.5em;
+}
+
+.about p {
+  line-height: 1.4em;
+  max-width: 30em;
+  margin: 0 auto 1em auto;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 1em;
+  font-size: 0.9em;
+  color: #fff;
+}
+
+.content .project {
+    background-color: #511b63;
+    border: 2px solid #c037e6;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    gap: 1.5rem;
+    overflow: hidden; 
+}
+
+.project img {
+    flex: 0 0 250px;
+  max-width: 250px;
+  height: auto;
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+.project a {
+    text-decoration: none;
+    color: #fff;
+    max-width: 30em;
+    margin: 1rem;   
+}
+.project div {
+  flex:1;
+}
+.content h2 {
+    text-align: Center;
+    font-size: xx-large;
+}
+
+.content .project > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem;                
+  text-decoration: none;
+  color: #fff;               
+}
+ .project:hover {
+  transform: scale(1.02);
+}

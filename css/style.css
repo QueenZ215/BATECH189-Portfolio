@@ -1,6 +1,19 @@
+/* Palette (notes kept for reference)
+  511B62 russian violet (outer panels)
+  439FF1 chefchaouen Blue (project cards)
+  9AE5E6 Tiffany blue (headshot ring)
+  856A5D Raw umber (borders)
+  F3B3A6 melon (links accent)
+*/
+
+
+
+
 /* Base styling */
+
+* { box-sizing: border-box; } /* True width - ZC*/
 body {
-  font-family: 'Alice', serif;
+  font-family: 'Poppins', sans-serif;
   background-color: #000;
   margin: 0;
   padding: 2em;
@@ -8,57 +21,55 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-image: url(../images/backgound.jpg);
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed; /* background stays in place content moves - ZC */
 }  
-/*
-.outer-container2 {
-  background: #000;
-  max-width: 60em;
-  width: 100%;
-  padding: 1em;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border:3em solid #2f0e38;
-  
-} */
+
+h2 {
+  font-family: 'Amatic SC', cursive;  
+}
+
+h1 {
+  font-family: 'Caveat', cursive;
+  font-size: xxx-large;
+  font-weight: bold;
+}
+
 .outer-container {
-  /* background: #000; */
   background:transparent;
   color: #fff;
   margin:0 auto;
   max-width: 50em;
   width: 100%;
-  padding: 2em;
-  border-radius: 12px;
-  /* border:2px solid #511b63; */
-  
-  
+  border-radius: 12px;  
 }
 
+
 .inner-container {
-  background: #511b63;
+  background: #511B62;
   width: 100%;
   padding: 2em;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  min-height: 100vh;
-  border:2px solid #872ba6;
+  border:2px solid #856A5D;
   max-width: 40em;
   margin: 0 auto;
   text-align: center;
 }
+.inner-container p {
+  text-align: left;  /* aligned  text left per typography rules but I think it looks better center- ZC */
+}
 .inner-container-project {
-  background: #000;
-  /* background:transparent; */
-  /* width: 100%; */
+  background: #511B62;
   padding: 2em;
   padding-top: 1em;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  min-height: 100vh;
-  border:2px solid #872ba6;
+  border:2px solid #856A5D;
   max-width: 50em;
   align-content: center;
+  text-align: center;
   
 }
 /* Header + Nav */
@@ -88,8 +99,8 @@ header {
   width: 200px;
   height: 200px;
   object-fit: cover;
-  border-radius: 50%; /* circular */
-  border: 4px solid #c037e6;
+  border-radius: 50%; /* circular - ZC */
+  border: 4px solid #9AE5E6;
   margin-bottom: 1.5em;
 }
 
@@ -98,55 +109,65 @@ header {
   max-width: 30em;
   margin: 0 auto 1em auto;
 }
+.other-work ul {
+  list-style: none;
+}
+.other-work a , .about a {
+  text-decoration: none;
+  color: #856A5D ;
+}
+
+
+/* Projects */
+.project {
+    background-color: #439FF1;
+    border: 2px solid #856A5D;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+}
+
+.project img {
+  width: 100%;          
+  height: 200px;        /* fixed height for uniform look  -ZC */
+  object-fit: cover;    /* crop to fit while preserving aspect ratio -ZC */
+  border-radius: 6px;
+  max-width: 20em;
+  border: 2px solid #856A5D;
+  object-position: 0; /* starts at top left of image - ZC */
+}
+.project a {
+    text-decoration: none;
+    margin: 1rem;   
+}
+.content .project div {
+  flex:1;
+}
+
+.content .project h2 {
+    text-align: Center;
+    font-size: xx-large;
+}
+
+.project > a {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1rem;                
+  text-decoration: none;
+  color: #000;               
+}
+
+.project:hover {
+  transform: scale(1.02);
+}
 
 /* Footer */
 footer {
   margin-top: auto;
   text-align: center;
   padding-top: 1em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   color: #fff;
-}
-
-.content .project {
-    background-color: #511b63;
-    border: 2px solid #c037e6;
-    border-radius: 12px;
-    margin-bottom: 1rem;
-    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.3);
-    gap: 1.5rem;
-    overflow: hidden; 
-}
-
-.project img {
-    flex: 0 0 250px;
-  max-width: 250px;
-  height: auto;
-  border: 2px solid #000;
-  border-radius: 12px;
-}
-.project a {
-    text-decoration: none;
-    color: #fff;
-    max-width: 30em;
-    margin: 1rem;   
-}
-.project div {
-  flex:1;
-}
-.content h2 {
-    text-align: Center;
-    font-size: xx-large;
-}
-
-.content .project > a {
-  display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1rem;                
-  text-decoration: none;
-  color: #fff;               
-}
- .project:hover {
-  transform: scale(1.02);
 }
